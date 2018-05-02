@@ -11,14 +11,15 @@ class RNN(nn.Module):
         self.output_size = output_size
         self.n_layers = n_layers
         self.encoder = nn.Embedding(input_size, hidden_size)
-        self.gru = nn.GRU(hidden_size, hidden_size, n_layers, dropout=0.1)
+        self.gru = nn.GRU(input_size, hidden_size, n_layers, dropout=0.1)
         self.decoder = nn.Linear(hidden_size, output_size)
 
 
     def forward(self, input, hidden):
         batch_size = input.size(0)
-        input = self.encoder(input)
-        output, hidden = self.gru(input.view(1, batch_size, -1), hidden)
+        # output, hidden = self.gru(input.view(1, batch_size, -1), hidden)
+        i = input.view(1, batch_size, -1).float()
+        output, hidden = self.gru(i, hidden)
         output = self.decoder(output.view(batch_size, -1))
         return output, hidden
 

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab6fd14b-eb4b-40e6-8ce1-f703c9e50e41" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LogisticRegressor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RewardPredictor.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rnn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple_models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_classes.py" afterPath="$PROJECT_DIR$/data_classes.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/context.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/context_processing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/train_context.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_processing.py" afterPath="$PROJECT_DIR$/data_processing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/train.py" afterPath="$PROJECT_DIR$/train.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnn.py" afterPath="$PROJECT_DIR$/rnn.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,21 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data.txt">
+      <file leaf-file-name="context.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/context.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="-3988">
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_processing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -41,22 +40,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fake.pt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fake.pt">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rnn.py">
+      <file leaf-file-name="context_processing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/context_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+            <state relative-caret-position="-1160">
+              <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,8 +55,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="34" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -74,24 +64,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simple_models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/simple_models.py">
+      <file leaf-file-name="rnn.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train_context.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/train_context.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-680">
+              <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loss.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/torch/nn/modules/loss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogisticRegressor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LogisticRegressor.py">
+      <file leaf-file-name="module.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/torch/nn/modules/module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="116">
+              <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,35 +111,10 @@
       <file leaf-file-name="RewardPredictor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RewardPredictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="383">
               <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_classes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_classes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,6 +138,9 @@
       <find>item_indeces</find>
       <find>disconnect</find>
       <find>seperate</find>
+      <find>5</find>
+      <find>epoc</find>
+      <find>10</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -162,18 +152,20 @@
         <option value="$PROJECT_DIR$/data.txt" />
         <option value="$PROJECT_DIR$/data_classes.py" />
         <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/rnn.py" />
         <option value="$PROJECT_DIR$/simple_models.py" />
         <option value="$PROJECT_DIR$/LogisticRegressor.py" />
         <option value="$PROJECT_DIR$/RewardPredictor.py" />
+        <option value="$PROJECT_DIR$/rnn.py" />
         <option value="$PROJECT_DIR$/data_processing.py" />
+        <option value="$PROJECT_DIR$/context_processing.py" />
+        <option value="$PROJECT_DIR$/train_context.py" />
+        <option value="$PROJECT_DIR$/context.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
-    <option name="width" value="1191" />
+    <option name="width" value="1117" />
     <option name="height" value="777" />
   </component>
   <component name="ProjectView">
@@ -221,7 +213,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.LogisticRegressor">
+  <component name="RunManager" selected="Python.train_context">
     <configuration name="LogisticRegressor" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -239,7 +231,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="RewardPredictor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="context_processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -251,7 +243,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PredictingNegotiationConfidentials" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RewardPredictor.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/context_processing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,7 +265,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rnn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -285,23 +277,42 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PredictingNegotiationConfidentials" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
-      <option name="PARAMETERS" value="fake" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rnn.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.data_processing" />
-      <item index="1" class="java.lang.String" itemvalue="Python.train" />
-      <item index="2" class="java.lang.String" itemvalue="Python.LogisticRegressor" />
-      <item index="3" class="java.lang.String" itemvalue="Python.RewardPredictor" />
+    <configuration name="train_context" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="PredictingNegotiationConfidentials" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train_context.py" />
+      <option name="PARAMETERS" value="context_model_5000_iterations --iterations 5000" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.LogisticRegressor" />
+      <item index="1" class="java.lang.String" itemvalue="Python.context_processing" />
+      <item index="2" class="java.lang.String" itemvalue="Python.train_context" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rnn" />
+      <item index="4" class="java.lang.String" itemvalue="Python.data_processing" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.LogisticRegressor" />
-        <item index="1" class="java.lang.String" itemvalue="Python.RewardPredictor" />
-        <item index="2" class="java.lang.String" itemvalue="Python.data_processing" />
-        <item index="3" class="java.lang.String" itemvalue="Python.train" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.train_context" />
+        <item index="1" class="java.lang.String" itemvalue="Python.data_processing" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rnn" />
+        <item index="3" class="java.lang.String" itemvalue="Python.context_processing" />
+        <item index="4" class="java.lang.String" itemvalue="Python.LogisticRegressor" />
       </list>
     </recent_temporary>
   </component>
@@ -319,18 +330,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="23" width="1191" height="777" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1117" height="777" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17841601" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2539535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047040973" sideWeight="0.14099216" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3019727" sideWeight="0.85900784" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42640364" sideWeight="0.24774405" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.71168435" sideWeight="0.8441345" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22464898" sideWeight="0.87172776" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44764796" sideWeight="0.7667537" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42640364" sideWeight="0.752256" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -357,7 +367,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="43" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -441,7 +451,7 @@
         <state relative-caret-position="135">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -451,7 +461,7 @@
         <state relative-caret-position="780">
           <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -500,7 +510,7 @@
         <state relative-caret-position="135">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -538,17 +548,7 @@
         <state relative-caret-position="45">
           <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -571,31 +571,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LogisticRegressor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -607,19 +607,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RewardPredictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="383">
           <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -629,11 +619,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_processing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="102" column="0" lean-forward="true" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state relative-caret-position="282">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/torch/nn/modules/loss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/context.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3988">
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/context_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1160">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_context.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="6739" column="72" lean-forward="false" selection-start-line="6739" selection-start-column="72" selection-end-line="6739" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>

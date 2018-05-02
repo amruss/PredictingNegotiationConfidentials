@@ -1,0 +1,316 @@
+1 4 1 0 4 0 i would like 4 hats and you can have the rest .
+1 3 2 1 0 2 you can have all the hats if i get the book and basketballs .
+1 3 1 1 0 1 hi i would like the book and ball and you can have the hats
+4 1 2 3 1 0 i would like the hat and 3 books
+3 3 1 3 0 0 im a reader , so id like the books . . . . you may have the hats and ball
+3 1 2 0 1 2 i want the hat and the balls
+2 2 2 2 1 0 i really just need the 2 books and 1 hat
+2 2 2 1 1 1 well now . i see two of everything . how about we split it down the middle ?
+3 1 1 2 0 1 i would like the ball and two books
+3 2 1 3 2 0 if i can have the hats and the books you can have the ball
+4 1 1 1 1 0 hi there . i'd like a hat and a book , thank you much .
+2 2 2 1 0 2 i need both balls and 1 book
+1 3 2 1 2 1 let's split them in half
+1 3 2 0 2 1 i'd like 2 hats , and 1 ball .
+2 3 1 0 0 1 i need that ball so bad ! what do you want ?
+1 2 3 1 2 0 hello , how about i get the book and the hats and you can have the balls ?
+1 2 3 0 2 1 no i want the hats and a ball
+1 2 3 1 0 2 ok , so the book and 2 balls for me and you get the hats and a ball ?
+2 2 1 2 0 1 i would like the ball and the books
+1 3 1 0 2 1 hi , i would like the ball and 2 hats and you can have the book and 1 hat
+1 3 1 1 3 1 i rather like the ball also . you can have all three hats if i get the ball and book .
+2 3 1 0 3 0 hello , i would like the hats , and you can have the rest .
+2 3 1 0 2 1 i can also take 2 hats and the ball , giving you 1 hat and the books .
+2 3 1 0 1 1 could i have the ball and 1 hat ?
+1 1 4 1 1 0 i'll take the book and hat , you can have the balls
+1 1 4 0 1 2 i really need that hat and two balls
+1 1 4 1 0 0 i'll take the book , you can have the rest
+3 2 1 1 1 1 i would like 1 of each
+3 2 1 2 0 1 i can't do that . i'll take the ball 2 books
+3 2 1 0 1 1 i'll take ball and 1 hat
+3 2 1 0 0 1 no sorry . how about i take the ball and you get the rest ?
+2 4 1 2 0 1 i would like the ball and the books
+2 4 1 0 0 1 you can have the books but i would like the ball .
+2 4 1 0 4 0 hmm . okay , i think i can work with that . i take the hats , you get the ball and books ?
+1 2 2 0 2 0 i need the hats you can have everything else
+1 2 2 0 0 2 you take all balls and i keep everything
+1 2 4 0 2 4 balls and hats for me
+1 2 4 1 0 1 can i have one ball and the book ?
+1 3 2 1 0 2 i'm interested in the book and both balls in exchange for the hats .
+2 2 1 0 0 1 i want the ball
+2 1 3 2 1 0 i'll take books and hat if you want the balls
+2 1 3 1 0 3 i can give you the hat and one of the books .
+2 2 2 2 1 0 hi . may i have the books and 1 hat ?
+2 2 2 2 1 0 id rather give the balls than the hat
+2 2 2 2 0 1 if i can have both the books and 1 ball , you can have the rest .
+2 2 2 1 2 0 ill give you 2 balls and 1 book
+3 2 2 0 2 1 i need 2 hats and 1 ball .
+1 1 3 0 1 2 i would like the hat and two balls
+1 1 3 1 0 2 i can part with the hat , but not 2 balls . i'll need at least two of them to make a deal .
+1 1 3 1 1 1 okay , i'll take the hat , one ball and one book ?
+1 1 3 1 0 2 i'll take two balls and the book
+1 2 3 1 0 3 if i can have the balls and the book you can have the hats
+2 2 1 1 1 1 i'll take one of each if that's ok ?
+2 2 1 0 2 0 i need 2 hats . you can have the rest
+1 2 2 0 2 0 i want two hats
+1 2 2 1 0 1 i get the books and a ball deal
+2 2 1 0 2 1 i need the hats and the ball
+2 2 1 2 1 0 i can give you one hat and the ball . i want 2 books and 1 hat
+2 2 1 0 2 1 i have to have both hats and the ball
+2 2 1 2 1 1 if you take 1 hat i have to have everything else
+1 1 3 1 1 0 you can have the balls if i can have the book and hat
+3 2 2 0 2 2 i'd like the hats and balls . what do you want ?
+3 2 2 3 1 0 you can have the balls and one hat
+3 1 2 0 1 2 i need the balls and the hat
+3 1 2 0 1 2 i need the same . if i can't have the balls i can't make a deal
+3 1 2 3 1 0 you can have the balls if i can have everything else
+1 2 2 1 0 2 i'll take the book and two balls you .
+1 2 2 0 2 0 fine , i get both hats
+2 3 2 2 3 0 take all the balls i keep everything else
+2 3 2 0 3 1 nah , hats and a ball for me
+2 3 2 0 2 2 ok , two hats and 2 balls for me
+3 1 2 0 1 2 i need the balls and a hat
+3 1 2 - - - how many balls do you need
+3 1 2 3 0 2 could you just take the hat and give me the rest ?
+3 1 2 - - - not possible
+3 1 2 3 0 0 okay ill give you the hat and balls
+3 1 2 - - - great
+1 3 2 0 1 2 hi , i would like 2 balls and 1 hat .
+1 3 2 1 0 1 i'd like book and 1 ball or hat ?
+1 3 2 0 0 2 hmm , how about i get the 2 balls and you keep the rest ?
+1 3 2 - - - deal .
+1 1 3 0 0 3 i want the balls . i can offer you the rest .
+1 1 3 0 - 1 can i have 1 ball and give you a book for it ?
+1 1 3 1 0 2 2 balls and a book to me ? if so that works for me .
+1 4 1 0 2 1 i'd like the ball and two hats .
+1 4 1 1 0 1 unfortunately the ball is highest value to me . only way i can give the ball up is if you give me everything else . otherwise , i can take the ball and the book and leave you the hats .
+1 4 1 1 2 0 you can have the ball . i'll take the book and we can split the hats .
+1 3 1 1 0 1 i will take 1 book and 1 ball
+1 3 1 - - - sounds like a deal !
+1 3 1 - - - thanks
+1 2 3 1 2 0 i'd like the two hats and the book .
+1 2 3 1 1 1 can i have the the book , one hat and one ball
+1 2 3 1 1 0 you can have the three balls and a hat but i need that book .
+1 2 3 0 2 3 i really need that book too , you take book i take the rest
+1 2 3 1 0 0 deal . i get the book you can have the rest .
+3 1 2 0 1 2 i would like hat and 2 balls
+3 1 2 0 1 0 i would like the hat , the rest to you
+3 1 2 - - - i accept
+1 2 2 1 1 1 i like 1 book 1 hat and 1 ball
+4 1 1 - - - what do you need ?
+4 1 1 0 1 1 i need the hat and ball you can have all the books
+4 1 1 - - - that's not gonna work for me . i've got some flexibility , but not that . what else can you do ?
+4 1 1 - - - why don't you make me an offer
+4 1 1 0 0 1 all books and the hat ?
+4 1 1 0 1 1 not gonna happen , i have no wiggle room i need the hat and the ball
+3 2 2 3 1 1 i would all the books and one ball and one hat
+3 2 2 0 1 2 you can take all the books but i would like 2 balls at least and one hat
+3 2 2 3 1 0 ok i will take the 3 books and one hat
+3 2 2 - - - cool done deal !
+1 2 2 0 0 2 can i have balls ? you can have the rest .
+1 2 2 - - 2 i need the balls as well . can we split the difference ?
+1 2 2 1 1 1 ok . can i have 1 ball , 1 hat , and 1 book ?
+1 2 2 0 2 1 i would need the ball and two hats in order to make it work and that is giving me a very low score
+1 2 2 1 0 1 ok . i can take 1 ball and the book .
+1 2 2 - - - okay thank you !
+1 2 4 0 0 4 hi , can i have all the balls ?
+4 1 1 4 0 0 if i can get the books you can have the rest
+4 1 1 - - - deal !
+1 3 2 1 0 0 if i can have the book , you can have the rest
+1 3 1 - - - okay that works ! thank you !
+1 1 3 0 1 3 i would like all the balls and the hat .
+1 1 3 1 1 0 can i have the book and the hat ?
+1 1 3 - - - deal .
+3 3 1 0 3 1 hi i would like the ball and hats and you can have the books
+3 3 1 - 2 - give me atleast 2 hats then works for me otherwise i don't get anything cause i need the ball too
+3 3 1 - - - sorry that wont work for me . no deal
+1 3 1 1 0 1 i'd like the book and ball , the hats to you
+1 3 1 1 2 0 i want the book and two hats
+1 3 1 - - - deal
+3 2 1 1 0 0 i can offer you one ball or one book
+3 2 1 0 0 1 i can offer you one ball or one book
+3 2 1 3 0 0 that is just not going to happen . you can have the rest if i can have all the books .
+3 2 1 1 2 1 how about you take two books
+3 2 1 2 0 1 i'll take two books and the ball .
+1 4 1 1 0 1 i would like a ball and a book . you can have all 4 hats
+1 4 1 1 2 0 how about i take book , you take ball and we split hats ?
+1 4 1 - - - ok
+1 2 2 0 0 2 2 balls for me and 2 hats and a book for you ?
+1 2 2 0 1 1 i'll trade you a book for a hat or ball
+1 2 2 0 0 2 huh ? i just want the two balls
+1 2 2 - - 1 i need one ball at least
+1 2 2 1 1 1 ok , one ball , one hat and one book for me , one ball and one hat for you ?
+1 2 2 0 2 1 i want two hats and a ball
+1 2 2 - - - it irks me but i can live with it
+2 4 1 2 2 0 i wouldlike the books and 2 hats
+2 4 1 0 3 1 can i have 3 hats and the ball ? the hats are very low and i don`t want to take the books from you
+1 3 1 0 2 1 give me ball and 2 hats
+1 3 1 - 0 1 you can have the hats , but i can't give up the ball .
+1 3 1 1 3 0 you get ball i get rest
+2 1 4 0 1 4 give me hat and balls
+2 1 4 - - - that's a low deal for me
+2 1 4 0 1 2 gimme hat and 2 balls
+2 1 4 - - - no way
+2 1 4 2 1 0 gimme hat and 2 books
+2 1 4 - 1 - i cant give you the hat
+2 1 4 - - - then we no deal
+2 1 4 - - - yup
+1 2 2 1 0 2 i would like both balls and the book .
+1 2 2 1 2 0 i need both hats and the book
+1 2 2 1 0 - you can have the hats but i need the book .
+1 2 2 0 2 2 give me both hats and balls
+1 2 2 - - 2 i can't give up the balls either .
+1 2 2 1 2 0 give me hats and book
+1 2 2 - - - deal .
+2 1 2 1 1 0 i'd love to have a hat and a book please .
+2 1 2 - 1 - i can not make that deal . i need the hat as well
+2 1 2 0 1 1 yeah i really need that hat too . i can do hat plus one ball instead ?
+2 1 2 - 1 - if i can not have the hat i can not make a deal
+1 3 1 1 2 0 i'd like 1 book and 2 hats please
+1 3 1 - - - ok do it
+2 2 2 2 0 1 i'd like 2 books and a ball .
+2 2 2 1 2 0 how about 2 balls and 1 book ? i'll take 1 book and 2 hats ? : )
+2 2 1 2 0 0 i need two books , rest to you
+2 2 1 - - - ok deal
+4 1 1 2 1 0 i would like the hat and two of the books please
+4 1 1 0 1 1 i can not give up the hat . i can give you all of the books if i can have the ball and the hat
+4 1 1 4 0 1 to give up that hat im going to need everything else .
+4 1 1 0 1 1 i can not make that deal . i need both the hat and the ball .
+4 1 1 4 0 1 well the only way i remotely come out of this in the postive is to have that ball and the four books .
+1 3 1 1 0 0  i just want the book . you can take the rest .
+1 3 1 1 3 0 i would like the book and 3 hats
+1 3 1 1 0 0 i have to have the book .
+1 3 1 0 3 1 ok you take the book i get the rest ?
+1 3 1 1 0 1 if i can have the book and the ball you can have the hats
+1 3 1 1 2 0 no that's not a fair deal . you can have 1 hat and 1 ball .
+1 3 1 1 0 0 no , i need the book you can have everything else
+1 3 1 0 3 1 okay , i will take the ball and the 3 hats .
+1 3 1 - - - okay deal .
+2 3 1 0 2 1 i'll take the ball and two hats .
+2 3 1 - - - i'm going to respond after this line of filler to deceive the system
+2 3 1 - - - ok
+2 3 1 - - - yeah that's fine
+1 2 2 1 2 0 i need book and both hats
+1 2 2 1 0 1 you can have the hats , but i need the book and at least one ball then
+1 2 2 - - - ok accepted
+4 1 1 0 1 1 ill give you the books ill take the ball and hat
+4 1 1 3 1 0 how about i take 3 books and the hat ?
+4 1 1 - - - books arent worth anything to me no deal
+4 1 1 4 0 0 very well , i'll take the books . you take the hat and ball .
+3 2 1 1 0 1 i'd like the ball and a book .
+3 2 1 - - - i can agree to that
+3 2 1 - - - sounds good . thanks !
+1 2 2 1 0 0 i need the book you can have the rest
+2 1 3 0 1 0 if i can have the hat , you can have the rest
+2 1 3 2 0 3 ill take the books and the balls
+2 1 3 2 1 0 i would like the books and the hat .
+2 1 3 - 1 -  i really like the hat .
+2 1 3 2 0 3 how about you take the hat and i get everything else ?
+2 1 3 0 1 1 i would like at least 1 ball to go with my hat
+2 1 3 2 0 2 that is fine , i will give you the hat and one ball .
+3 1 1 3 0 0  how about you get one hat and one ball
+2 2 1 - - - hi ! what would you like ?
+2 2 1 2 1 1 everything , but i'll settle for 2 books , 1 hat and 1 ball .
+3 2 1 3 0 0 i want 3 books
+3 2 1 0 0 1 i need the ball . you can have the rest .
+3 2 1 - - - deal
+1 3 2 - - - hello !
+1 3 2 - - - good afternoon !
+1 3 2 1 0 1 i would like to give you three cowboy hats and one basketball .
+3 1 2 0 1 1 i'd like one ball and one hat
+2 4 1 0 2 1 struggle here everything is low points . . . could i have the ball and 2 hats ? that puts me at 6
+2 4 1 2 3 0 gimme 3 hats and the books
+2 4 1 - - - eh thats only 5 , i need 6 to be able to agree to anything .
+1 2 2 1 2 0 i need the book and 2 hats
+1 2 2 1 0 0 i only need the book . it is a deal breaker for me
+1 2 2 - - - ditto , rest are worth nothing or 1
+2 2 1 2 0 1 i'll take the books and ball if that's ok ?
+2 2 1 1 - - hmmmmm can i get one book
+2 2 1 2 0 0 how about you take the hats and the ball ?
+2 2 1 1 0 0 i need a book , only thing worth anything to me
+2 2 1 1 0 1 oki , i'll take a book and a ball
+2 1 3 - - - what would you like
+2 1 3 - - 3 i'd like the balls , others are negotiable . crappy distribution
+2 1 2 0 1 0 gimme hat
+2 1 2 2 - - if you include some books
+2 1 2 1 1 0 ill take a hat and a book
+2 3 1 - - 1 i'll take the basketball if that's okay ? how do you want to split the rest ?
+2 3 1 - - 1 i need at least the ball
+2 3 1 2 3 0 if i give you the ball can i have everything else ?
+2 3 1 1 0 1 can i have one book or one hat along with the ball ?
+2 3 1 0 1 1 can i have one book or one hat along with the ball ?
+2 3 1 0 0 1 i can take the ball and give you everything else ?
+2 3 1 0 0 1 i'll take the ball , you can have everything else
+2 1 3 2 0 0 i'll take the books , you can keep the rest
+2 1 3 - - - i think that is a fair deal .
+1 3 1 1 1 1 i want the ball , the book , and at least one hat .
+1 3 1 1 0 1 sorry that wont work for me . i would like the ball and book .
+1 3 1 0 - 1 no go . you can have the book , i get the ball .
+1 3 1 - - - sorry looks like we wont be reaching a deal
+1 3 1 0 0 1 i'm not budging on the ball , you can have everything else .
+1 3 1 - - - ok , we can do that
+4 2 1 0 2 1 i need the ball and 2 hats
+4 2 1 - - - ok deal
+2 2 3 2 1 0 i would lik 2 books and 1 hat . you can have the rest
+3 1 1 0 1 1 i would like the hat and the ball .
+3 1 1 0 1 0 i only want the hat , but you can have the rest
+4 2 1 0 2 1 if i can have the hats and the ball you can have the books
+4 2 1 - - 1 i need the ball
+4 2 1 - - 1 i need the ball as well . i can not make a deal without it .
+3 2 2 0 2 2 hi i would like the hats and balls and you can have the books
+3 2 2 - 1 0 you can have the balls , but i would like at least 1 hat .
+3 2 2 0 1 2 ok . you can have the books and 1 hat
+1 1 3 0 0 3 i'd like all 3 balls please .
+1 1 3 1 0 1 can i get 1 ball and the books
+1 1 3 0 0 3 sorry , that doesn't work for me . i need all the balls and you can have the hats and books .
+1 1 3 1 0 1 i need the book and atleast one ball
+1 1 3 1 1 0 i wanted the book and the hat
+1 1 3 1 0 0 i will give up everything for just the book
+1 2 3 0 0 3 hi can i have the basketballs ?
+2 1 2 2 1 1 i'd like the hat , two books and a ball
+2 1 2 0 0 2 i need both balls , you can have the rest
+2 1 2 0 1 2 i want the balls and the hat
+2 1 2 0 0 2 if i can have the balls you can have the hat and the books
+2 1 2 2 1 1 you can have one ball if i get the books
+1 2 3 1 0 0 i will take just the book and you can have the rest
+1 2 3 - - - yes it is , and 0 for both hat and balls
+1 2 3 1 0 0 so you get 2 hats and 3 balls , deal ?
+1 2 3 0 2 3 i'll take the hats and balls .
+2 2 3 0 1 3 i want the balls and one hat
+2 1 2 0 1 2 i want the hat and two balls
+2 1 2 - - 1 no deal unless i can have a ball
+3 1 3 0 1 2 can i have the hat and 2 balls ?
+3 1 3 0 1 0 i must have the hat
+3 1 3 0 1 0 sorry , without the hat i won`t make any deals
+3 1 1 2 1 0 i want the hat and 2 books
+3 1 1 1 0 1 i can't agree to that deal . i'll take the ball , but i'm going to need one of the books as well .
+3 1 1 2 1 0 so you get the ball and 1 book ?
+3 1 1 - - - if that seems to you .
+4 1 2 0 1 2 i'll take the hat and balls , you can have the books
+4 1 2 4 1 0 the books and hat will be fine for me or books and a ball , make a pick
+4 1 2 4 0 1 the books and hat will be fine for me or books and a ball , make a pick
+4 1 2 0 0 2 i'll take the balls
+4 1 2 4 1 0 so i get the hat and books ?
+4 1 2 - - - yes
+2 2 1 2 1 1 hello . i'll take two books , a hat and the ball
+2 2 1 2 1 0 you can have all of the balls if i can have the book and hat .
+1 2 2 1 0 2 i'd like the book and the balls .
+1 2 2 1 0 0 i would also like the book , you can keep the balls
+1 2 2 1 0 1 i really want that book . you can have both hats and one ball .
+1 2 2 1 0 0 i don't want any balls . i want the book
+1 2 2 1 0 0 the book is really the only thing i want .
+1 1 3 0 1 2 greetings ! i the great mauve power ranger come to request of you one hat and two balls , so i can set off in my ventures to save the world !
+3 1 1 1 0 1 can i have the ball and 1 book since they both will give me 2 points . you get the rest
+3 1 1 - - - that would work for me
+3 1 1 0 1 1 you take the books and i get the hat and ball
+3 1 1 2 0 1 i can not make that deal . i need the ball and two books
+1 1 3 1 1 1 hello . i'd like a book , a hat and one ball .
+1 1 3 1 1 0 sorry i cant do that . i would like the hat and book and you can have the balls
+1 1 3 1 0 2 i definitely can't give up the book . i would be willing to give you the hat and one ball , but i would need the other two balls .
+1 3 2 0 1 2 i want 2 balls 1 hat
+1 3 2 1 2 0 if you take both balls i need the rest
+2 1 3 0 1 0 hello there . so , i'd really love to get the hat .
+1 1 3 1 1 0 i would like the hat and the book
+1 1 3 0 0 3 that is fine i will take the balls
+1 1 3 1 0 3 i would like to offer you the hat
+1 1 3 1 1 0 i'll take the hat and the book , you can have all the balls .

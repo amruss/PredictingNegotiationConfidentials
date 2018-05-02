@@ -181,8 +181,6 @@ def seperate_line(p1):
     return reward_text, p1_text, p1_inputs, p1_outputs
 
 
-
-
 if __name__ == "__main__":
     data_file_name = "data.txt"
     num_lines = 1000
