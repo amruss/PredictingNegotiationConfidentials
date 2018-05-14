@@ -64,14 +64,14 @@ def process_line(p1, p2, map):
             p1 = True
             message_text = text.split(you)[1]
             word_list = message_text.split()
-            tensor = word_tensor(word_list, map)
-            message = Message(word_list, p1, indx, tensor)
+            w_list = get_word_list(word_list, map)
+            message = Message(word_list, p1, indx, w_list)
         elif them in text:
             p1 = False
             message_text = text.split(them)[1]
             word_list = message_text.split()
-            tensor = word_tensor(word_list, map)
-            message = Message(word_list, p1, indx, tensor)
+            w_list = get_word_list(word_list, map)
+            message = Message(word_list, p1, indx, w_list)
         messages.append(message)
         indx += 1
 
@@ -140,15 +140,21 @@ def tensorfy(data_point):
     target = torch.LongTensor(BATCH_SIZE, MAX_LENGTH)
 
 def get_target(point):
-    target = torch.LongTensor(BATCH_SIZE, TARGET_LENGTH)
+    tar = torch.LongTensor(BATCH_SIZE, 33)
     agenda = point.p2_weights
-    ipt = torch.from_numpy(np.array(agenda))
-    ipt = ipt.long()
-    target[0] = ipt
-    point.target = target
+    book_index = agenda[0]
+    hat_index = 11 + agenda[1]
+    ball_index = 22 + agenda[2]
+    array = [0]*33
+    array[book_index] = 1
+    array[hat_index] =  1
+    array[ball_index] = 1
+    tensor = torch.from_numpy(np.array(array)).long()
+    tar[0] = tensor
+    point.target = tar
 
 
-def word_tensor(word_list, map):
+def get_word_list(word_list, map):
     # tensor = torch.zeros(len(MAX_LENGTH)).long()
     indexes = []
     for w in range(len(word_list)):
@@ -160,13 +166,7 @@ def word_tensor(word_list, map):
         padding = [0]
         indexes.extend(padding * (MAX_LENGTH - len(indexes)))
 
-    inp = torch.LongTensor(BATCH_SIZE, MAX_LENGTH)
-    ipt = torch.from_numpy(np.array(indexes))
-    ipt = ipt.long()
-
-    inp[0] = ipt #TODO: change for batch size
-
-    return inp
+    return indexes
 
 
 def seperate_line(p1):

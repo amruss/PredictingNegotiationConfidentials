@@ -13,7 +13,7 @@ them = "THEM:"
 you = "YOU:"
 BATCH_SIZE = 1
 LONGEST_MESSAGE_CHAR = 269
-LONGEST_MESSAGE_WORD = 50
+LONGEST_MESSAGE_WORD = 70
 MAX_LENGTH = LONGEST_MESSAGE_WORD
 TARGET_LENGTH = 3
 NUM_CLASSES = 6
@@ -94,6 +94,7 @@ def get_target(book_offer, hat_offer, ball_offer):
     tensor = torch.from_numpy(np.array(array)).long()
     tar[0] = tensor
 
+
     # book_array = [0]*NUM_CLASSES
     # book_array[book_offer] = 1
     # book_tensor = torch.from_numpy(np.array(book_array)).long()
@@ -139,4 +140,4 @@ def word_tensor(string, map, amounts):
 if __name__ == "__main__":
     data_file_name = "context.txt"
     num_lines = 1000
-    x_s, y_s = process_file(data_file_name)
+    x_s, y_s, vocab = process_file(data_file_name)
