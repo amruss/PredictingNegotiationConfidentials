@@ -21,7 +21,8 @@ torch.manual_seed(1)
 
 #INPUT_LENGTH = MAX_LENGTH #+ 3 #p1_weight length
 CONTEXT_INPUT_LENGTH = 70 #LONGEST_MESSAGE_WORD + 3
-INPUT_LENGTH = 30 + 3
+# INPUT_LENGTH = 30 + 3
+INPUT_LENGTH = 3 + 3 + 1
 
 def train_batch(model, inp, target, batch_size, criterion, optimizer, hidden):
     model.zero_grad()
@@ -41,16 +42,20 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
         for point in tqdm(train_dataset):
             tar = Variable(point.target)
             hidden = model.init_hidden(batch_size)
-            context_hidden = context_model.init_hidden(BATCH_SIZE)
             l = 0
             for message in point.messages:
+                context_hidden = context_model.init_hidden(BATCH_SIZE)
                 model.zero_grad() #TODO: retrain with other vocab
                 message_tensor = Variable(tensorfy(point.items + message.word_tensor, CONTEXT_INPUT_LENGTH))
                 context_tensor, context_hidden = context_model(message_tensor, context_hidden)
                 #input = point.p1_weights + message.word_tensor
                 #inp = Variable(tensorfy(input))
-                p1_weights = tensorfy(point.p1_weights, 3).float()
-                model_input = torch.cat((p1_weights, context_tensor.data), 1)
+                context_prediciton = get_context_prediction(point, message.p1, context_tensor)
+                # p1_weights = tensorfy(point.p1_weights, 3).float()
+                # model_input = torch.cat((p1_weights, context_tensor.data), 1)
+                #model_input= context_tensor.data
+                model_input = [message.p1] + context_prediciton + point.p1_weights
+                model_input = tensorfy(model_input, INPUT_LENGTH)
                 inp = Variable(model_input)
                 loss = train_batch(model, inp, tar, batch_size, criterion, optimizer, hidden)
                 l += loss
@@ -63,6 +68,34 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
 
     print("Saving...")
     save(args.filename, model)
+
+def get_context_prediction(point, p1, context_output):
+    o = context_output.squeeze(0).data.numpy().tolist()
+    boo = o[:10]
+    ha = o[10:20]
+    bal = o[20:]
+    pred_books = boo.index(max(boo))
+    pred_hats = ha.index(max(ha))
+    pred_balls = bal.index(max(bal))
+
+    if not p1:
+        books, hats, balls = point.items
+        if pred_books >= books:
+            pred_books = 0
+        else:
+            pred_books = books - pred_books
+
+        if pred_hats >= hats:
+            pred_hats = 0
+        else:
+            pred_hats = hats - pred_hats
+
+        if pred_balls >= balls:
+            pred_balls = 0
+        else:
+            pred_balls = balls - pred_balls
+    return [pred_books, pred_hats, pred_balls]
+
 
 def validate_with_context(model, validation, criterion, context_model):
     index = random.randint(0, len(validation) -1)
@@ -78,7 +111,14 @@ def validate_with_context(model, validation, criterion, context_model):
     for message in point.messages:
         message_tensor = Variable(tensorfy(point.items + message.word_tensor, CONTEXT_INPUT_LENGTH))
         context_tensor, context_hidden = context_model(message_tensor, context_hidden)
-        inp = Variable(context_tensor.data)
+        # p1_weights = tensorfy(point.p1_weights, 3).float()
+        # model_input = torch.cat((p1_weights, context_tensor.data), 1)
+        # model_input = context_tensor.data
+
+        context_prediciton = get_context_prediction(point, message.p1, context_tensor)
+        model_input = [message.p1] + context_prediciton + point.p1_weights
+        model_input = tensorfy(model_input, INPUT_LENGTH)
+        inp = Variable(model_input)
         # input = point.p1_weights + message.word_tensor
         # inp = Variable(tensorfy(input))
         # loss = train_batch(model, inp, tar, BATCH_SIZE, criterion, optimizer, )
@@ -144,7 +184,7 @@ if __name__ == "__main__":
     training_data, word_map = process_file(args.data_file)
     # length = 5916
 
-    training = training_data[:4000]
+    training = training_data[:500] #TODO: MAKE BIGGER
     validation = training_data[4000:4900]
     test = training_data[4900:]
 
@@ -164,7 +204,6 @@ if __name__ == "__main__":
 
     FILENAME = 'context_model_5000_iterations_70words.pt'
     context_model = torch.load(FILENAME)
-    del args.filename
 
     # Train the Model
     try:
