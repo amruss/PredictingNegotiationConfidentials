@@ -37,7 +37,7 @@ def train(model, x_s, y_s, training_epochs, criterion, optimizer, batch_size, te
     for epoch in range(1, training_epochs + 1):
         loss_avg = 0
         for i in range(len(x_s)):
-            if len(x_s[i][0]) != LONGEST_MESSAGE_WORD:
+            if len(x_s[i][0]) != MAX_LENGTH:
                 print len(x_s[i])
             tar = Variable(y_s[i])
             inp = Variable(x_s[i])
@@ -137,7 +137,7 @@ if __name__ == "__main__":
     if len(x_s) != len(y_s):
         print "SOMETHING WRONG"
 
-    input_size = LONGEST_MESSAGE_WORD
+    input_size = MAX_LENGTH
     hidden_size = int(input_size)
     output_size = 30
 

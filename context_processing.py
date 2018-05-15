@@ -14,14 +14,15 @@ you = "YOU:"
 BATCH_SIZE = 1
 LONGEST_MESSAGE_CHAR = 269
 LONGEST_MESSAGE_WORD = 70
-MAX_LENGTH = LONGEST_MESSAGE_WORD
+MAX_LENGTH = LONGEST_MESSAGE_WORD + 3
 TARGET_LENGTH = 3
 NUM_CLASSES = 6
+vocab_filename = "data.txt"
 
 word_map = {}
 
 def process_file(data_file_name):
-    vocabulary = get_vocabulary(data_file_name)
+    vocabulary = get_vocabulary()
 
     x_s = []
     y_s = []
@@ -32,7 +33,8 @@ def process_file(data_file_name):
             y_s.append(y)
     return x_s, y_s, vocabulary
 
-def get_vocabulary(filename):
+def get_vocabulary():
+    filename = vocab_filename
     vocab = {}
     i = 11
     max = 0
@@ -124,7 +126,7 @@ def word_tensor(string, map, amounts):
         except:
             continue
     if len(indexes) < MAX_LENGTH:
-        padding = [10]
+        padding = [-1]
         indexes.extend(padding * (MAX_LENGTH - len(indexes)))
 
 

@@ -13,7 +13,7 @@ them = "THEM:"
 you = "YOU:"
 BATCH_SIZE = 1
 LONGEST_MESSAGE_CHAR = 269
-LONGEST_MESSAGE_WORD = 70
+LONGEST_MESSAGE_WORD = 67 #TODO: CHNAGE TO 70
 MAX_LENGTH = LONGEST_MESSAGE_WORD
 TARGET_LENGTH = 3
 
@@ -165,6 +165,8 @@ def get_word_list(word_list, map):
     if len(indexes) < MAX_LENGTH:
         padding = [0]
         indexes.extend(padding * (MAX_LENGTH - len(indexes)))
+    if len(indexes) > MAX_LENGTH:
+        indexes = indexes[:MAX_LENGTH]
 
     return indexes
 

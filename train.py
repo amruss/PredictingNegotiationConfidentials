@@ -20,8 +20,8 @@ args = argparser.parse_args()
 torch.manual_seed(1)
 
 #INPUT_LENGTH = MAX_LENGTH #+ 3 #p1_weight length
-CONTEXT_INPUT_LENGTH = MAX_LENGTH
-INPUT_LENGTH = 30
+CONTEXT_INPUT_LENGTH = 70 #LONGEST_MESSAGE_WORD + 3
+INPUT_LENGTH = 30 + 3
 
 def train_batch(model, inp, target, batch_size, criterion, optimizer, hidden):
     model.zero_grad()
@@ -45,11 +45,13 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
             l = 0
             for message in point.messages:
                 model.zero_grad() #TODO: retrain with other vocab
-                message_tensor = Variable(tensorfy(message.word_tensor))
+                message_tensor = Variable(tensorfy(point.items + message.word_tensor, CONTEXT_INPUT_LENGTH))
                 context_tensor, context_hidden = context_model(message_tensor, context_hidden)
                 #input = point.p1_weights + message.word_tensor
                 #inp = Variable(tensorfy(input))
-                inp = Variable(context_tensor.data)
+                p1_weights = tensorfy(point.p1_weights, 3).float()
+                model_input = torch.cat((p1_weights, context_tensor.data), 1)
+                inp = Variable(model_input)
                 loss = train_batch(model, inp, tar, batch_size, criterion, optimizer, hidden)
                 l += loss
             loss_avg += l / len(point.messages)
@@ -57,10 +59,37 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
 
         if print_progress:
             print('Average Loss for epoch ' + str(epoch) +" is " + str(loss_avg))
-            validate(model, val, criterion)
+            validate_with_context(model, val, criterion, context_model)
 
     print("Saving...")
     save(args.filename, model)
+
+def validate_with_context(model, validation, criterion, context_model):
+    index = random.randint(0, len(validation) -1)
+    point = validation[index]
+    tar = Variable(point.target)
+    print "TARGET: " + str(get_numbers(tar))
+    print "Items: " + str(point.items)
+    print "P1_WEIGHTS: " + str(point.p1_weights)
+    print "P2_WEIGHTS: " + str(point.p2_weights)
+    hidden = model.init_hidden(BATCH_SIZE)
+    context_hidden = context_model.init_hidden(BATCH_SIZE)
+    model.zero_grad()
+    for message in point.messages:
+        message_tensor = Variable(tensorfy(point.items + message.word_tensor, CONTEXT_INPUT_LENGTH))
+        context_tensor, context_hidden = context_model(message_tensor, context_hidden)
+        inp = Variable(context_tensor.data)
+        # input = point.p1_weights + message.word_tensor
+        # inp = Variable(tensorfy(input))
+        # loss = train_batch(model, inp, tar, BATCH_SIZE, criterion, optimizer, )
+        loss = 0
+        output, hidden = model(inp, hidden)
+        o = output.view(BATCH_SIZE, -1)
+        t = tar.float()
+        loss += criterion(o, t)
+        l = loss.data[0]
+        print "MESSAGE: " + str(message.text)
+        print "Predicted: " + str(get_numbers(output))
 
 def validate(model, validation, criterion):
     index = random.randint(0, len(validation) -1)
@@ -95,8 +124,8 @@ def get_numbers(output):
     pred_balls = str(bal.index(max(bal)))
     return pred_books, pred_hats, pred_balls
 
-def tensorfy(list):
-    inp = torch.LongTensor(BATCH_SIZE, CONTEXT_INPUT_LENGTH)
+def tensorfy(list, length):
+    inp = torch.LongTensor(BATCH_SIZE, length) #CONTEXT_INPUT_LENGTH
     ipt = torch.from_numpy(np.array(list))
     ipt = ipt.long()
 
