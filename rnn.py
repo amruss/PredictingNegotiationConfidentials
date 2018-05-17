@@ -17,7 +17,6 @@ class RNN(nn.Module):
 
     def forward(self, input, hidden):
         batch_size = input.size(0)
-        # output, hidden = self.gru(input.view(1, batch_size, -1), hidden)
         i = input.view(1, batch_size, -1).float()
         output, hidden = self.gru(i, hidden)
         output = self.decoder(output.view(batch_size, -1))

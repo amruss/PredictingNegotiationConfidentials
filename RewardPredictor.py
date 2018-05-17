@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from data_processing import *
 from sklearn import linear_model
 
-data_file_name = "data.txt"
+data_file_name = "data/data.txt"
 file = open(data_file_name, 'r')
 vec = CountVectorizer()
 x = vec.fit_transform(file).toarray()

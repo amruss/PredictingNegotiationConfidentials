@@ -1,3 +1,5 @@
+# Script for running logistic regressor experiments
+
 from data_classes import *
 import torch
 import numpy as np
@@ -5,9 +7,16 @@ import gzip
 from sklearn.feature_extraction.text import CountVectorizer
 from data_processing import *
 from sklearn import linear_model
+# from train import *
 
-data_file_name = "data.txt"
+FILENAME = 'models/context_model_5000_iterations_70words_dataVocab.pt'
+context_model = torch.load(FILENAME)
+context_hidden = context_model.init_hidden(1)
+
+
+data_file_name = "data/data.txt"
 file = open(data_file_name, 'r')
+
 vec = CountVectorizer()
 x = vec.fit_transform(file).toarray()
 file.close()
@@ -28,6 +37,9 @@ for line in iterator:
     p1_reward_text, p1_text, p1_inputs, p1_outputs = seperate_line(new)
     p2_reward_text, p2_text, p2_inputs, p2_outputs = seperate_line(old)
     check = check_lines(p1_inputs, p2_inputs, p1_text[0], p2_text[0])
+    # nltk.sentiment.util.demo_vader_instance()
+
+    point = process_line(new, old, word_map)
 
     if check:
         items = [p1_inputs[i] for i in item_indeces]

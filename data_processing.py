@@ -1,3 +1,5 @@
+# data processing functions
+
 from data_classes import *
 import torch
 import numpy as np
@@ -5,6 +7,7 @@ import gzip
 from sklearn.feature_extraction.text import CountVectorizer
 import re
 
+# Constants
 item_indeces = [0, 2, 4]
 weight_indeces = [1, 3, 5]
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -16,7 +19,6 @@ LONGEST_MESSAGE_CHAR = 269
 LONGEST_MESSAGE_WORD = 67 #TODO: CHNAGE TO 70
 MAX_LENGTH = LONGEST_MESSAGE_WORD
 TARGET_LENGTH = 3
-
 word_map = {}
 
 def process_file(data_file_name, num_lines=None):
@@ -109,9 +111,6 @@ def get_reward(line):
         return 0
     return int(reward)
 
-
-
-
 def check_lines(p1_inputs, p2_inputs, p1_message, p2_message):
     p1_items = [p1_inputs[i] for i in item_indeces]
     p2_items = [p2_inputs[i] for i in item_indeces]
@@ -155,7 +154,6 @@ def get_target(point):
 
 
 def get_word_list(word_list, map):
-    # tensor = torch.zeros(len(MAX_LENGTH)).long()
     indexes = []
     for w in range(len(word_list)):
         try:

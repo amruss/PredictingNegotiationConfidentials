@@ -22,8 +22,10 @@ torch.manual_seed(1)
 #INPUT_LENGTH = MAX_LENGTH #+ 3 #p1_weight length
 CONTEXT_INPUT_LENGTH = 70 #LONGEST_MESSAGE_WORD + 3
 # INPUT_LENGTH = 30 + 3
-INPUT_LENGTH = 3 + 3 + 1
+INPUT_LENGTH = 3 + 1 #+ CONTEXT_INPUT_LENGTH - 3 # +3
 
+
+# Trains the model for one batch of data points
 def train_batch(model, inp, target, batch_size, criterion, optimizer, hidden):
     model.zero_grad()
     loss = 0
@@ -35,6 +37,8 @@ def train_batch(model, inp, target, batch_size, criterion, optimizer, hidden):
     optimizer.step()
     return loss.data[0]
 
+
+# Run training for all iterations
 def train(model, train_dataset, training_epochs, criterion, optimizer, batch_size, val, test, context_model, print_progress=True):
     for epoch in range(1, training_epochs + 1):
         print "EPCOH " + str(epoch)
@@ -45,16 +49,19 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
             l = 0
             for message in point.messages:
                 context_hidden = context_model.init_hidden(BATCH_SIZE)
-                model.zero_grad() #TODO: retrain with other vocab
+                model.zero_grad()
+
+                # Change/uncomment this code to change the feature set
                 message_tensor = Variable(tensorfy(point.items + message.word_tensor, CONTEXT_INPUT_LENGTH))
                 context_tensor, context_hidden = context_model(message_tensor, context_hidden)
+                context_prediciton = get_context_prediction(point, message.p1, context_tensor)
                 #input = point.p1_weights + message.word_tensor
                 #inp = Variable(tensorfy(input))
-                context_prediciton = get_context_prediction(point, message.p1, context_tensor)
                 # p1_weights = tensorfy(point.p1_weights, 3).float()
                 # model_input = torch.cat((p1_weights, context_tensor.data), 1)
                 #model_input= context_tensor.data
-                model_input = [message.p1] + context_prediciton + point.p1_weights
+
+                model_input = [message.p1] + context_prediciton # + message.word_tensor #point.p1_weights #message.word_tensor #+ point.items #+ point.p1_weights
                 model_input = tensorfy(model_input, INPUT_LENGTH)
                 inp = Variable(model_input)
                 loss = train_batch(model, inp, tar, batch_size, criterion, optimizer, hidden)
@@ -69,6 +76,7 @@ def train(model, train_dataset, training_epochs, criterion, optimizer, batch_siz
     print("Saving...")
     save(args.filename, model)
 
+# Interpret the output from the context model
 def get_context_prediction(point, p1, context_output):
     o = context_output.squeeze(0).data.numpy().tolist()
     boo = o[:10]
@@ -80,23 +88,38 @@ def get_context_prediction(point, p1, context_output):
 
     if not p1:
         books, hats, balls = point.items
-        if pred_books >= books:
+        if pred_books == 9:
+            pred_books = -1
+        elif pred_books >= books:
             pred_books = 0
         else:
             pred_books = books - pred_books
 
-        if pred_hats >= hats:
+        if pred_hats == 9:
+            pred_hats = -1
+        elif pred_hats >= hats:
             pred_hats = 0
         else:
             pred_hats = hats - pred_hats
 
-        if pred_balls >= balls:
+        if pred_balls == 9:
+            pred_balls = -1
+        elif pred_balls >= balls:
             pred_balls = 0
         else:
             pred_balls = balls - pred_balls
+    else:
+        if pred_books == 9:
+            pred_books = -1
+        if pred_balls == 9:
+            pred_balls = -1
+        if pred_balls == 9:
+            pred_balls = -1
+
     return [pred_books, pred_hats, pred_balls]
 
 
+# Test on the validation set, when using the context model
 def validate_with_context(model, validation, criterion, context_model):
     index = random.randint(0, len(validation) -1)
     point = validation[index]
@@ -116,7 +139,7 @@ def validate_with_context(model, validation, criterion, context_model):
         # model_input = context_tensor.data
 
         context_prediciton = get_context_prediction(point, message.p1, context_tensor)
-        model_input = [message.p1] + context_prediciton + point.p1_weights
+        model_input = [message.p1] + context_prediciton # + message.word_tensor #point.p1_weights #message.word_tensor #+ point.items #+ point.p1_weights
         model_input = tensorfy(model_input, INPUT_LENGTH)
         inp = Variable(model_input)
         # input = point.p1_weights + message.word_tensor
@@ -131,6 +154,8 @@ def validate_with_context(model, validation, criterion, context_model):
         print "MESSAGE: " + str(message.text)
         print "Predicted: " + str(get_numbers(output))
 
+
+# Test on the validation set, when not using the context model
 def validate(model, validation, criterion):
     index = random.randint(0, len(validation) -1)
     point = validation[index]
@@ -180,19 +205,14 @@ def save(filename, model):
 
 if __name__ == "__main__":
 
-    #TODO: sperate into train/ test
     training_data, word_map = process_file(args.data_file)
-    # length = 5916
-
     training = training_data[:500] #TODO: MAKE BIGGER
     validation = training_data[4000:4900]
     test = training_data[4900:]
-
     input_size = INPUT_LENGTH
     hidden_size = int(input_size)
     output_size = 33
 
-    #TODO
     if args.model == "None":
         model = RNN(input_size, hidden_size, output_size, args.layers)
     else:

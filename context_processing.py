@@ -1,3 +1,5 @@
+# data processing functions for context model
+
 from data_classes import *
 import torch
 import numpy as np
@@ -5,6 +7,9 @@ import gzip
 from sklearn.feature_extraction.text import CountVectorizer
 import re
 
+
+
+#Constants
 item_indeces = [0, 2, 4]
 weight_indeces = [1, 3, 5]
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -17,13 +22,11 @@ LONGEST_MESSAGE_WORD = 70
 MAX_LENGTH = LONGEST_MESSAGE_WORD + 3
 TARGET_LENGTH = 3
 NUM_CLASSES = 6
-vocab_filename = "data.txt"
-
+vocab_filename = "data/data.txt"
 word_map = {}
 
 def process_file(data_file_name):
     vocabulary = get_vocabulary()
-
     x_s = []
     y_s = []
     with open(data_file_name, 'r') as f:
@@ -96,29 +99,11 @@ def get_target(book_offer, hat_offer, ball_offer):
     tensor = torch.from_numpy(np.array(array)).long()
     tar[0] = tensor
 
-
-    # book_array = [0]*NUM_CLASSES
-    # book_array[book_offer] = 1
-    # book_tensor = torch.from_numpy(np.array(book_array)).long()
-    #
-    # hat_array = [0]*NUM_CLASSES
-    # hat_array[hat_offer] = 1
-    # hat_tensor = torch.from_numpy(np.array(hat_array)).long()
-    #
-    # ball_array = [0]*NUM_CLASSES
-    # ball_array[ball_offer] = 1
-    # ball_tensor = torch.from_numpy(np.array(ball_array)).long()
-    #
-    # target[0][0] = book_tensor
-    # target[0][1] = hat_tensor
-    # target[0][2] = ball_tensor
-
     return tar
 
 
 def word_tensor(string, map, amounts):
     word_list = string.split(" ")
-    # tensor = torch.zeros(len(MAX_LENGTH)).long()
     indexes = amounts
     for w in range(len(word_list)):
         try:
@@ -134,7 +119,7 @@ def word_tensor(string, map, amounts):
     ipt = torch.from_numpy(np.array(indexes))
     ipt = ipt.float()
 
-    inp[0] = ipt #TODO: change for batch size
+    inp[0] = ipt
 
     return inp
 
