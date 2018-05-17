@@ -27,14 +27,12 @@ def process_file(data_file_name, num_lines=None):
     x = vec.fit_transform(file).toarray()
     file.close()
     word_map = vec.vocabulary_
-
     lines = []
     with open(data_file_name, 'r') as f:
         for line in f:
             lines.append(line.strip())
     data_points = []
     iterator = iter(lines)
-
     old = next(iterator)
     for line in iterator:
         new = line
@@ -50,8 +48,8 @@ def process_line(p1, p2, map):
     p1_reward_text, p1_text, p1_inputs, p1_outputs = seperate_line(p1)
     p2_reward_text, p2_text, p2_inputs, p2_outputs = seperate_line(p2)
 
+    # Check to make sure we have a corresponding data point
     check = check_lines(p1_inputs, p2_inputs, p1_text[0], p2_text[0])
-
     if not check:
         return None
 
@@ -80,7 +78,7 @@ def process_line(p1, p2, map):
     data_point = DataPoint(messages, p1_weights, p2_weights, items)
     return data_point
 
-
+# Get the terms of the deal
 def get_selection(line):
     m = re.search('disagree', line)
     n = re.search('no agreement', line)
@@ -103,7 +101,7 @@ def get_selection(line):
     else:
         return [0, 0, 0]
 
-
+# Get the reward amount
 def get_reward(line):
     p = line.split("<eos>")[-1]
     reward = p[8]
@@ -111,6 +109,7 @@ def get_reward(line):
         return 0
     return int(reward)
 
+# Make sure the data point is valid
 def check_lines(p1_inputs, p2_inputs, p1_message, p2_message):
     p1_items = [p1_inputs[i] for i in item_indeces]
     p2_items = [p2_inputs[i] for i in item_indeces]
@@ -134,10 +133,7 @@ def check_lines(p1_inputs, p2_inputs, p1_message, p2_message):
 
     return True
 
-def tensorfy(data_point):
-    inp = torch.LongTensor(BATCH_SIZE, MAX_LENGTH)
-    target = torch.LongTensor(BATCH_SIZE, MAX_LENGTH)
-
+# Get the tensor target for a data point
 def get_target(point):
     tar = torch.LongTensor(BATCH_SIZE, 33)
     agenda = point.p2_weights
@@ -165,7 +161,6 @@ def get_word_list(word_list, map):
         indexes.extend(padding * (MAX_LENGTH - len(indexes)))
     if len(indexes) > MAX_LENGTH:
         indexes = indexes[:MAX_LENGTH]
-
     return indexes
 
 

@@ -1,13 +1,7 @@
 # Script for running logistic regressor experiments
 
-from data_classes import *
-import torch
-import numpy as np
-import gzip
-from sklearn.feature_extraction.text import CountVectorizer
 from data_processing import *
 from sklearn import linear_model
-# from train import *
 
 FILENAME = 'models/context_model_5000_iterations_70words_dataVocab.pt'
 context_model = torch.load(FILENAME)

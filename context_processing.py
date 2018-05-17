@@ -3,13 +3,9 @@
 from data_classes import *
 import torch
 import numpy as np
-import gzip
-from sklearn.feature_extraction.text import CountVectorizer
-import re
 
 
-
-#Constants
+# Constants
 item_indeces = [0, 2, 4]
 weight_indeces = [1, 3, 5]
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
@@ -25,6 +21,7 @@ NUM_CLASSES = 6
 vocab_filename = "data/data.txt"
 word_map = {}
 
+
 def process_file(data_file_name):
     vocabulary = get_vocabulary()
     x_s = []
@@ -36,11 +33,11 @@ def process_file(data_file_name):
             y_s.append(y)
     return x_s, y_s, vocabulary
 
+# Returns a mapping of word -> number
 def get_vocabulary():
     filename = vocab_filename
     vocab = {}
     i = 11
-    max = 0
     with open(filename, 'r') as f:
         for line in f:
             words = line.strip().split(" ")
@@ -50,6 +47,8 @@ def get_vocabulary():
                     i += 1
     return vocab
 
+
+# Extracts the word list and target from the line
 def process_line(line, map):
     book_num = int(line[0])
     hat_num = int(line[2])
@@ -79,6 +78,7 @@ def process_line(line, map):
     target = get_target(book_offer, hat_offer, ball_offer)
     return word_list, target
 
+# Transform a string into a list of numbers
 def get_word_list(string, vocabulary):
     words = string.split(" ")
     word_list = []
@@ -86,8 +86,9 @@ def get_word_list(string, vocabulary):
         word_list.append(vocabulary[word])
     return word_list
 
+
+# Transform into a Pytorch Tensor
 def get_target(book_offer, hat_offer, ball_offer):
-    # target = torch.LongTensor(BATCH_SIZE, TARGET_LENGTH, NUM_CLASSES)
     tar = torch.LongTensor(BATCH_SIZE, 30)
     book_index = book_offer
     hat_index = 10 + hat_offer
@@ -98,10 +99,9 @@ def get_target(book_offer, hat_offer, ball_offer):
     array[ball_index] = 1
     tensor = torch.from_numpy(np.array(array)).long()
     tar[0] = tensor
-
     return tar
 
-
+# Transform string into a Pytorch tensor
 def word_tensor(string, map, amounts):
     word_list = string.split(" ")
     indexes = amounts
@@ -113,18 +113,13 @@ def word_tensor(string, map, amounts):
     if len(indexes) < MAX_LENGTH:
         padding = [-1]
         indexes.extend(padding * (MAX_LENGTH - len(indexes)))
-
-
     inp = torch.LongTensor(BATCH_SIZE, MAX_LENGTH)
     ipt = torch.from_numpy(np.array(indexes))
     ipt = ipt.float()
-
     inp[0] = ipt
-
     return inp
 
-
 if __name__ == "__main__":
-    data_file_name = "context.txt"
+    data_file_name = "data/context.txt"
     num_lines = 1000
     x_s, y_s, vocab = process_file(data_file_name)

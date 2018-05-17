@@ -9,7 +9,6 @@ class DataPoint(object):
         self.items = items
         self.target = []
 
-
 class Message(object):
     def __init__(self, text, p1, index, word_tensor):
         self.text = text
